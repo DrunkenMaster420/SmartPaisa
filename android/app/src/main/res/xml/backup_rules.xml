@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include app data -->
+    <include domain="file" path="."/>
+    <include domain="database" path="."/>
+    <include domain="root" path="."/>
+    <include domain="external" path="."/>
+
+    <!-- Include SharedPreferences but exclude Flutter-specific ones -->
+    <include domain="sharedpref" path="."/>
+    <exclude domain="sharedpref" path="FlutterSharedPreferences.xml"/>
+    <exclude domain="sharedpref" path="flutter.plugins.shared_preferences.xml"/>
+
+    <!-- Exclude sensitive data -->
+    <exclude domain="sharedpref" path="enable_app_lock"/>
+    <exclude domain="sharedpref" path="merchant_category_learning"/>
+</full-backup-content>
